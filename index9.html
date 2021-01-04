@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html> 
+ <head>
+    <title>Processing.JS inside Webpages: Template</title> 
+</head>
+ <body>
+    <p align="center"> 
+ <!--This draws the Canvas on the webpage -->
+      <canvas id="mycanvas"></canvas> 
+    </p>
+ </body>
+ 
+ 
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+ 
+ <script>
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(500, 500); 
+        frameRate(30);
+  
+        var xPos = 29;
+var yPos = 200;
+var xPos2 = 400;
+var yPos2 = 29;
+var a=10;
+var b=10;
+
+
+draw = function() {
+    background(29, 40, 115);
+    //Estrellas
+    ellipse(149,100,5,5);
+    ellipse(285,100,5,5);
+    ellipse(250,100,5,5);
+    ellipse(175,130,5,5);
+    ellipse(98,56,5,5);
+    ellipse(205,20,5,5);
+    ellipse(230,91,5,5);
+    ellipse(200,200,5,5);
+    ellipse(100,99,5,5);
+    ellipse(300,200,5,5);
+    ellipse(310,220,5,5);
+    ellipse(70,220,5,5);
+    ellipse(50,270,5,5);
+    ellipse(30,20,5,5);
+    ellipse(23,234,5,5);
+    ellipse(40,99,5,5);
+    ellipse(300,20,5,5);
+    ellipse(128,200,5,5);
+    ellipse(245,220,5,5);
+    ellipse(374,270,5,5);
+    ellipse(173,42,5,5);
+    ellipse(140,234,5,5);
+    ellipse(346,75,5,5);
+    ellipse(342,30,5,5);
+    ellipse(350,173,5,5);
+    
+    rect(22,336,57,62);
+    rect(99,300,71,98);
+    rect(192,300,71,98);
+    rect(290,336,57,62);
+    
+    
+    fill(255, 242, 0);
+    ellipse(xPos, yPos, a, b);
+    
+    //Segunda figura animada
+    ellipse(xPos2, yPos2, a, b);
+
+    yPos--;
+    xPos+=3;
+    yPos2++;
+    xPos2-=2;
+};
+
+
+  
+    }};
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas"); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>

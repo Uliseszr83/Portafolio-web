@@ -1,0 +1,53 @@
+body{
+
+    background-image:url("https://www.publicdomainpictures.net/pictures/280000/velka/background-christmas-tree.jpg");
+    overflow-y:auto;
+}
+            .titulos{
+
+                color:white;
+                text-align: center;
+            }
+            
+
+            #img1{
+
+                width:350px;
+                top:auto;
+                
+            }
+
+            #img2{
+
+                width:350px;
+                top:auto;
+               
+            }
+
+           .navidad{
+
+               color:white;
+               text-align: center;
+           }
+
+           .lista{
+
+               font-size: 22px;
+               color:white;
+           }
+
+           #texto{
+
+               color:white;
+               text-align: center;
+               overflow-y:auto;
+               font-size: 25px;
+           }
+
+           #final{
+
+            color:white;
+            text-align: center;
+            font-size: 35px;
+
+           }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html> 
+ <head>
+    <title>Proyecto de Cafe</title> 
+</head>
+ <body>
+    <p align="center"> 
+ <!--This draws the Canvas on the webpage -->
+      <canvas id="mycanvas"></canvas> 
+    </p>
+ </body>
+ 
+ 
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+ 
+ <script>
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(500, 500); 
+        frameRate(30);
+        fill(240, 9, 132);
+
+textSize(30);
+text("Venta de Café", 105, 43);
+textSize(15);
+text("Toda bonita historia empieza con un buen café", 50, 134);
+textSize(15);
+text("Se ofrecen cafe a buen precio",106,172);
+
+
+    //Dibujo
+
+    fill(237, 232, 232);
+    rect(157,282,79,85);
+    
+    fill(150, 108, 24);
+    rect(157,314,80,29);
+    
+    fill(15, 12, 12);
+    rect(157,270,80,15);
+    
+    fill(15, 12, 12);
+    rect(167,256,60,18);
+    
+    textSize(12);
+    text("Café",183,333);
+
+
+  
+    }};
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas"); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>

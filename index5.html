@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html> 
+ <head>
+    <title>Processing.JS inside Webpages: Template</title> 
+</head>
+ <body>
+    <p align="center"> 
+ <!--This draws the Canvas on the webpage -->
+      <canvas id="mycanvas"></canvas> 
+    </p>
+ </body>
+ 
+ 
+ <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
+ 
+ <script>
+    var sketchProc = function(processingInstance) {
+     with (processingInstance) {
+        size(700, 500); 
+        frameRate(30);
+  
+        var xPositions = [100,150,200];
+var yPositions = [0,50,150];
+
+//funcion que almacena aleatoriamente 
+for(var x=0;x<50;x++){
+    
+    xPositions.push(random(1,399));
+    yPositions.push(random(1,399));
+}
+
+mouseClicked = function(){
+    
+    xPositions.push(mouseX);
+    yPositions.push(mouseY);
+
+
+};
+
+draw = function() {
+    background(204, 247, 255);
+
+    for (var i = 0; i < xPositions.length; i++) {
+        noStroke();
+        fill(0, 200, 255);
+        ellipse(xPositions[i], yPositions[i], 10, 10);
+        yPositions[i] += 7;
+        
+        fill(114, 34, 189);
+        ellipse(xPositions[i]+48, yPositions[i]+4, 10, 20);
+        fill(41, 143, 41);
+        ellipse(xPositions[i]+76, yPositions[i]+9, 10, 20);
+        
+        if(yPositions[i]>450){
+        
+        yPositions[i] = 0;
+    }
+        //image(getImage("cute/Star"),xPositions,yPositions,30 ,50);
+        
+    }
+    
+    
+    
+};
+};
+
+  
+    };
+
+    // Get the canvas that Processing-js will use
+    var canvas = document.getElementById("mycanvas"); 
+    // Pass the function sketchProc (defined in myCode.js) to Processing's constructor.
+    var processingInstance = new Processing(canvas, sketchProc); 
+ </script>
+
+</html>

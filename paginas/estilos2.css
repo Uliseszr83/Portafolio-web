@@ -1,0 +1,63 @@
+body{
+
+            background-image: url("fondo.jpg");
+            overflow-y: auto;
+        }
+        
+        h1{
+
+            color:white;
+            text-align: center;
+            font-size: 30px;
+
+        }
+
+        #imagen{
+
+            width: 350px;
+            
+        }
+
+        h1{
+            text-align: center;
+            color:white;
+        }
+
+        h2{
+            background: rgb(255, 255, 0);
+                border: 2px solid black;
+                font-family: "Comic Sans MS", fantasy;
+                padding: 10px;
+                width: 262px;
+                position: absolute;
+                top: 460px;
+                left: 1080px;
+                z-index: 1;
+        }
+
+        h3{
+            
+            background: rgb(255, 255, 0);
+                border: 2px solid black;
+                font-family: "Comic Sans MS", fantasy;
+                padding: 10px;
+                width: 262px;
+                position: absolute;
+                top: 460px;
+                right: 1080px;
+                z-index: 2;
+            
+        }
+
+        h4{
+            background: rgb(255, 255, 0);
+                border: 2px solid black;
+                font-family: "Comic Sans MS", fantasy;
+                padding: 10px;
+                width: 262px;
+                position: absolute;
+                top: 280px;
+                left:540px;
+                z-index: 3;
+
+        }
